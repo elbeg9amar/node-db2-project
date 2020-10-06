@@ -5,7 +5,8 @@ exports.up = function(knex) {
         tbl.string('VIN', 20).notNullable().unique().index();
         tbl.string('make', 25).notNullable().index();
         tbl.string('model', 25).notNullable().index();
-        tbl.integer('mileage', 25).notNullable().index().time();
+        tbl.integer('mileage', 25).notNullable().index();
+        tbl.timestamp('time').defaultTo(knex.fn.now())
     })
 };
 
