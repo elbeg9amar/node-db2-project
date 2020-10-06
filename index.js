@@ -1,14 +1,4 @@
-const express = require('express');
-const helmet = require('helmet');
-
-const server = express();
-
-server.use(helmet());
-server.use(express.json());
-
-server.get('/', (req,res) => {
-    res.status(200).json(`Api is running ${PORT}`)
-});
+const server = require("./api/server")
 
 const PORT = process.env.PORT || 999;
 
