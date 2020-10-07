@@ -7,6 +7,7 @@ exports.up = function(knex) {
         tbl.string('model', 25).notNullable().index();
         tbl.integer('mileage', 25).notNullable().index();
         tbl.timestamp('time').defaultTo(knex.fn.now())
+        tbl.string('title',20)
     })
 };
 
